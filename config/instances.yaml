@@ -1,14 +1,24 @@
 ---
 containers: []
 virtualmachines:
-  - name: "host1"
-    image: "rhel-9.5"
-    memory: "2G"
+  - name: "terminal1"
+    image: "rhel-9.6"
+    memory: "4G"
     cores: 1
+#    packages:
+#		  - 
     image_size: "40G"
     tags:
       - key: "AnsibleGroup"
         value: "bastions"
     networks:
       - default
-      - secondary
+  - name: "terminal2"
+    image: "rhel-9.6"
+    memory: "4G"
+    cores: 1
+    image_size: "40G"
+      - key: "AnsibleGroup"
+        value: "nodes"
+    networks:
+      - default

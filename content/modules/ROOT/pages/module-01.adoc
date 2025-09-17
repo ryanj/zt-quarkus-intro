@@ -1,3 +1,27 @@
+
+In this track, you will get an introduction to [Quarkus](https://quarkus.io).
+
+What you need to know before you start:
+
+In order to get full benefit from taking this track you should...<br>• Have experience programming applications in Java using the [Maven](https://maven.apache.org/) framework.<br>• Understand how Maven uses the Project Object Model (POM) to manage artifacts and plugins.<br>• Know how Maven applications are described and built using a Maven [`pom.xml`](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html) file.
+
+<br>
+
+= What is Quarkus?
+
+Quarkus is a Kubernetes Native Java stack tailored for [GraalVM](https://www.graalvm.org/) and [OpenJDK HotSpot](https://openjdk.java.net/groups/hotspot/). Quarkus is also crafted from the best of breed Java libraries and standards. Amazingly fast boot time, incredibly low RSS memory (not just heap size!) offering near instant scale up and high density memory utilization in container orchestration platforms like Kubernetes. Quarkus uses a technique called compile time boot. [Learn more](https://quarkus.io/vision/container-first).
+
+Quarkus maximizes the Developer Productivity with the following features:
+* [Zero-config Live coding](https://quarkus.io/guides/maven-tooling#dev-mode/)
+* [Dev Services](https://quarkus.io/guides/dev-services)
+* [Continuous testing](https://quarkus.io/guides/continuous-testing)
+* [Dev UI](https://quarkus.io/guides/dev-ui)
+* [Command Line Interface (CLI)](https://quarkus.io/guides/cli-tooling)
+* [Remote Development](https://quarkus.io/guides/maven-tooling#remote-development-mode)
+
+Application requirements have changed over the last few years. For any application to succeed in the era of big data, IoT or cloud computing, adhering to the principles and practices of the [reactive architecture style](https://developers.redhat.com/coderland/reactive/reactive-intro) is essential.
+
+
 = Writing your lab
 
 == Variables

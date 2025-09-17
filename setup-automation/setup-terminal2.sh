@@ -10,3 +10,4 @@ chmod 666 /tmp/progress.log
 
 #dnf install -y nc
 
+echo "-w \"\n\"" >> ~/.curlrc
