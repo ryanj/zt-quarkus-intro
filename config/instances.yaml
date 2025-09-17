@@ -5,8 +5,6 @@ virtualmachines:
     image: "rhel-9.6"
     memory: "4G"
     cores: 1
-#    packages:
-#		  - 
     image_size: "40G"
     tags:
       - key: "AnsibleGroup"
