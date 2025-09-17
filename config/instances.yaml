@@ -16,6 +16,7 @@ virtualmachines:
     memory: "4G"
     cores: 1
     image_size: "40G"
+    tags:
       - key: "AnsibleGroup"
         value: "nodes"
     networks:
