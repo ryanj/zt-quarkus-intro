@@ -14,23 +14,24 @@ In order to get full benefit from taking this track you should...
 Quarkus is a Kubernetes Native Java stack tailored for link:https://www.graalvm.org/[GraalVM^] and link:https://openjdk.java.net/groups/hotspot/[OpenJDK HotSpot^]. Quarkus is also crafted from the best of breed Java libraries and standards. Amazingly fast boot time, incredibly low RSS memory (not just heap size!) offering near instant scale up and high density memory utilization in container orchestration platforms like Kubernetes. Quarkus uses a technique called compile time boot. link:https://quarkus.io/vision/container-first[Learn more^].
 
 Quarkus maximizes the Developer Productivity with the following features:
-* link:https://quarkus.io/guides/maven-tooling#dev-mode/[Zero-config Live coding^]
-* link:https://quarkus.io/guides/dev-services[Dev Services^]
-* link:https://quarkus.io/guides/continuous-testing[Continuous testing^]
-* link:https://quarkus.io/guides/dev-ui[Dev UI^]
-* link:https://quarkus.io/guides/cli-tooling[Command Line Interface (CLI)^]
-* link:https://quarkus.io/guides/maven-tooling#remote-development-mode[Remote Development^]
+
+ * link:https://quarkus.io/guides/maven-tooling#dev-mode/[Zero-config Live coding^]
+ * link:https://quarkus.io/guides/dev-services[Dev Services^]
+ * link:https://quarkus.io/guides/continuous-testing[Continuous testing^]
+ * link:https://quarkus.io/guides/dev-ui[Dev UI^]
+ * link:https://quarkus.io/guides/cli-tooling[Command Line Interface (CLI)^]
+ * link:https://quarkus.io/guides/maven-tooling#remote-development-mode[Remote Development^]
 
 Application requirements have changed over the last few years. For any application to succeed in the era of big data, IoT or cloud computing, adhering to the principles and practices of the link:https://developers.redhat.com/coderland/reactive/reactive-intro[reactive architecture style^] is essential.
 
 
 The Maven project you're going to create has the following structure:
-* An `org.acme.quickstart.GreetingResource` resource exposed on `/hello`
-* An associated unit test
-* A landing page that is accessible on `http://localhost:8080` after starting the application
-* An example `Dockerfile`s for a variety of build targets (native, jvm, etc)
-* The application configuration file
 
+ * An `org.acme.quickstart.GreetingResource` resource exposed on `/hello`
+ * An associated unit test
+ * A landing page that is accessible on `http://localhost:8080` after starting the application
+ * An example `Dockerfile`s for a variety of build targets (native, jvm, etc)
+ * The application configuration file
 
 = Creating a basic project using Quarkus
 
@@ -43,7 +44,7 @@ cd /root/projects/quarkus/ && pwd
 
 You'll get the following output.
 
-[source,bash]
+[source]
 ----
 /root/projects/quarkus/
 ----
@@ -121,7 +122,7 @@ curl -w "\n" localhost:8080/hello/
 
 You'll get the following output:
 
-[source,bash]
+[source]
 ----
 Hello from Quarkus REST
 ----
@@ -178,10 +179,7 @@ image::dev-ui.png[Dev UI]
 
 image::configuration.png[Config Editor Detail]
 
-|NOTE:|
-|----|
-|The Dev UI is only enabled when in `developer` mode. It is not deployed when in `production` mode because, as the name implies, it's designed for developers to use during development. For more detail on what you can do in developer mo
-de, check out the link:https://quarkus.io/guides/dev-ui[Dev UI Guide^].|
+NOTE: The Dev UI is only enabled when in `developer` mode. It is not deployed when in `production` mode because, as the name implies, it's designed for developers to use during development. For more detail on what you can do in developer mode, check out the link:https://quarkus.io/guides/dev-ui[Dev UI Guide^].
 
 = Implementing continuous testing
 
