@@ -9,8 +9,11 @@ antora:
       solveButton: true
 
 tabs:
-  - name: ">_ terminal"
+  - name: ">_ terminal 1"
     url: /wetty
+    secondary_url: /wetty
+  - name: ">_ terminal 2"
+    url: /wetty_terminal1/ssh/root
   - name: "Asciidoc Doc"
     url: https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
     external: true
