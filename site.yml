@@ -1,6 +1,6 @@
 ---
 site:
-  title: "Qurkus on OpenShift"
+  title: "Quarkus on OpenShift"
   url: https://github.com/rhpds/showroom_template_zero
   start_page: modules::module-01.adoc
 
