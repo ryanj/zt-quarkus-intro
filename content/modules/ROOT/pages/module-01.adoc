@@ -37,21 +37,21 @@ The Maven project you're going to create has the following structure:
 
 `Step 1:` Run the following command in the **Terminal 1** window to the left to go to the working directory for the Quarkus application you're going to create. (The directory was created as part of the tracks setup process.)
 
-[source,console]
+[source,console,run]
 ----
 $ cd ~/projects/quarkus/ && pwd
 ----
 
 You'll get the following output.
 
-[source]
+[source,nocopy]
 ----
 /home/rhel/projects/quarkus/
 ----
 
 `Step 2:` Run the following command in the **Terminal 1** window to create the basic Maven project.
 
-[source,console]
+[source,console,run]
 ----
 mvn io.quarkus.platform:quarkus-maven-plugin:3.9.2:create \
     -DprojectGroupId=org.acme \
@@ -64,7 +64,7 @@ The `mvn` command shown above invokes the installation process that creates all 
 
 The snippet of code below shows you the output you'll get at the end of the installation process. The date information will be different in your output.
 
-[source]
+[source,nocopy]
 ----
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
@@ -75,7 +75,7 @@ Before you start the Quarkus application, you need to disable the CORS filter to
 
 Run the following command in **Terminal 1** to update your `application.properties` file in the *src/main/resources* directory:
 
-[source,console]
+[source,console,run]
 ----
 cat <<EOF > /home/rhel/projects/quarkus/getting-started/src/main/resources/application.properties
 %dev.quarkus.dev-ui.cors.enabled=false
@@ -89,14 +89,14 @@ You are ready to run the Quarkus application
 
 `Step 3` Run the following command in Terminal 1 to the left to compile and run the demonstration project.
 
-[source,console]
+[source,console,run]
 ----
 mvn quarkus:dev -Dquarkus.http.host=0.0.0.0 -Dquarkus.analytics.disabled=true -f /home/rhel/projects/quarkus/getting-started
 ----
 
 There will be a lot of output to the screen. When the process is finished running, you will see the following:
 
-[source]
+[source,nocopy]
 ----
 Listening for transport dt_socket at address: 5005
 __  ____  __  _____   ___  __ ____  ______
@@ -115,14 +115,14 @@ Press [e] to edit command line args (currently ''), [r] to resume testing, [o] T
 Let's verify that the demonstration application is actually up and running.
 
 
-[source,console]
+[source,console,run]
 ----
 curl -w "\n" localhost:8080/hello/
 ----
 
 You'll get the following output:
 
-[source]
+[source,nocopy]
 ----
 Hello from Quarkus REST
 ----
@@ -149,14 +149,14 @@ image::change-to-hola.png[Change to Hola]
 
 `Step 8:` Return to **Terminal 2** and tun the following command in the terminal window:
 
-[source,console]
+[source,console,run]
 ----
 curl -w "\n" localhost:8080/hello/
 ----
 
 You'll get the following output with the new phrase:
 
-[source]
+[source,nocopy]
 ----
 Hola from Quarkus REST
 ----
@@ -179,7 +179,10 @@ image::dev-ui.png[Dev UI]
 
 image::configuration.png[Config Editor Detail]
 
-NOTE: The Dev UI is only enabled when in `developer` mode. It is not deployed when in `production` mode because, as the name implies, it's designed for developers to use during development. For more detail on what you can do in developer mode, check out the link:https://quarkus.io/guides/dev-ui[Dev UI Guide^].
+[NOTE]
+====
+The Dev UI is only enabled when in `developer` mode. It is not deployed when in `production` mode because, as the name implies, it's designed for developers to use during development. For more detail on what you can do in developer mode, check out the link:https://quarkus.io/guides/dev-ui[Dev UI Guide^].
+====
 
 = Implementing continuous testing
 
@@ -214,7 +217,7 @@ image::ct-success.png[CT success]
 
 Note that you can find the following test result in the terminal 1.
 
-[source]
+[source,nocopy]
 ----
 All 1 test is passing (0 skipped), 1 test was run in 618ms. Tests completed at 03:33:55 due to changes to GreetingResource.class.
 ----
