@@ -53,7 +53,7 @@ You'll get the following output.
 
 [source,bash,run]
 ----
-mvn io.quarkus.platform:quarkus-maven-plugin:3.9.2:create \
+mvn io.quarkus.platform:quarkus-maven-plugin:3.26.4:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=getting-started \
     -Dextensions='rest'
