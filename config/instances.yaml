@@ -11,3 +11,17 @@ virtualmachines:
         value: "bastions"
     networks:
       - default
+    services:
+      - name: quarkus-8080
+        ports:
+          - port: 8080
+            protocol: TCP
+            targetPort: 8080
+            name: quarkus
+    routes:
+      - name: quarkus-8080
+        host: terminal1
+        service: quarkus-8080
+        targetPort: 8080
+        tls: true
+        tls_termination: Edge
