@@ -12,16 +12,16 @@ virtualmachines:
     networks:
       - default
     services:
-      - name: quarkus-8080
+      - name: quarkus
         ports:
           - port: 8080
             protocol: TCP
             targetPort: 8080
             name: quarkus
     routes:
-      - name: quarkus-8080
+      - name: quarkus
         host: terminal1
-        service: quarkus-8080
+        service: quarkus
         targetPort: 8080
         tls: true
         tls_termination: Edge
