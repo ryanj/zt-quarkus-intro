@@ -12,8 +12,14 @@ tabs:
   - name: ">_ terminal 1"
     url: /wetty
     secondary_url: /wetty
+  - name: "Visual Studio Code"
+    url: https://vscode-${guid}.${domain}/?folder=/home/rhel
+    external: false
   - name: ">_ terminal 2"
-    url: /wetty_terminal1/ssh/root
+    url: /wetty
+  - name: "Dev UI"
+    url: http://terminal1-${guid}.${domain}:8080/q/dev
+    external: false
   - name: "Asciidoc Doc"
     url: https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
     external: true

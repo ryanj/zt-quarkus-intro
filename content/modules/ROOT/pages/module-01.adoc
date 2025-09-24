@@ -75,11 +75,11 @@ Before you start the Quarkus application, you need to disable the CORS filter to
 
 Run the following command in **Terminal 1** to update your `application.properties` file in the *src/main/resources* directory:
 
-[source,bash,run]
+[source,bash,run,subs=attributes+]
 ----
 cat <<EOF > /home/rhel/projects/quarkus/getting-started/src/main/resources/application.properties
 %dev.quarkus.dev-ui.cors.enabled=false
-%dev.quarkus.dev-ui.hosts=crc-8080-${INSTRUQT_PARTICIPANT_ID}.env.play.instruqt.com
+%dev.quarkus.dev-ui.hosts=terminal1-${guid}.${domain}
 EOF
 ----
 
