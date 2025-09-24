@@ -112,8 +112,7 @@ Tests paused
 Press [e] to edit command line args (currently ''), [r] to resume testing, [o] Toggle test output, [:] for the terminal, [h] for more options>
 ----
 
-Let's verify that the demonstration application is actually up and running.
-
+`Step 4` Let's verify that the demonstration application is actually up and running.
 
 [source,bash,run]
 ----
@@ -135,17 +134,13 @@ Let's take a look.
 
 You are going to change the output of the **Hello App** API application from `Hello from Quarkus REST` to `Hola from Quarkus REST` by doing nothing more than changing one line of code. Quarkus will take care of everything else.
 
-`Step 6:`  Click the **Visual Editor** tab in the horizontal menu bar over the terminal window to the left. You'll see the code editor that is part of the interactive learning environment.
+`Step 7:` Replace all mentions of `Hello` with `Hola` in the file `/home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/quickstart/GreetingResource.java`.
 
-In case you don't see the subdirectories under the */home/rhel/projects/quarkus* directory, click on the reload icon.
-
-`Step 7a:`  Scroll through the file tree on the left side of the editor until you get to the file `/home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/quickstart/GreetingResource.java`. Then click on the filename in the tree.
-
-`Step 7b:`  Change the word `Hello` to `Hola` at Line 14 in the file `GreetingResource.java` as shown in the figure below at Callout 2.
-
-image::change-to-hola.png[Change to Hola]
-
-`Step 7c:`  The change will be saved automatically, as shown in the figure above at Callout 3.
+[source,bash,run]
+----
+sed -e 's/Hello/Hola/' -i /home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/GreetingResource.java
+cat /home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/GreetingResource.java
+----
 
 `Step 8:` Return to **Terminal 2** and tun the following command in the terminal window:
 
@@ -194,18 +189,21 @@ As you might recall, when you ran `mvn quarkus:dev` you were presented with the 
 
 image::ct-start.png[CT start]
 
-As you will see from all the red test class which means the unit test is failed. The reason for the failure is that previously you changed the word `Hello` to `Hola`. The unit test expects the output `Hello from Quarkus REST`. The outp
-ut failed to meet the expectation.
+As you will see from all the red test class which means the unit test is failed. The reason for the failure is that previously you changed the word `Hello` to `Hola`. The unit test expects the output `Hello from Quarkus REST`. The output failed to meet the expectation.
 
 image::ct-failure.png[CT failure]
 
 Let's fix the code and get the tests to pass.
 
-`Step 12:` Click the **Visual Editor** tab in horizontal menu bar over the interactive learning window.
+`Step 14:` Change `Hola from Quarkus REST` back to `Hello from Quarkus REST`:
 
-`Step 13:` Navigate to the file `/home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/quickstart/GreetingResource.java`.
-
-`Step 14:` Change `Hola from Quarkus REST` back to `Hello from Quarkus REST` in the editor.
+[source,bash,run]
+----
+sed -e 's/Hola/Hello/' -i /home/rhel/projects/quarkus/getting-started/src/m
+ain/java/org/acme/GreetingResource.java
+cat /home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/Gree
+tingResource.java
+----
 
 As soon as your reset the code, Quarkus automatically re-runs the test.
 
