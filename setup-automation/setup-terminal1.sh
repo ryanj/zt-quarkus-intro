@@ -38,3 +38,4 @@ mkdir -p /root/projects/quarkus
 rm -Rf /root/projects/quarkus/getting-started
 echo "-w \"\n\"" >> /root/.curlrc
 echo "-w \"\n\"" >> /home/rhel/.curlrc
+chown -R rhel.rhel /home/rhel
