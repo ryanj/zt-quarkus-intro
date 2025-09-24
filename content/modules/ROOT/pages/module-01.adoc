@@ -199,10 +199,8 @@ Let's fix the code and get the tests to pass.
 
 [source,bash,run]
 ----
-sed -e 's/Hola/Hello/' -i /home/rhel/projects/quarkus/getting-started/src/m
-ain/java/org/acme/GreetingResource.java
-cat /home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/Gree
-tingResource.java
+sed -e 's/Hola/Hello/' -i /home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/GreetingResource.java
+cat /home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/GreetingResource.java
 ----
 
 As soon as your reset the code, Quarkus automatically re-runs the test.
