@@ -37,7 +37,7 @@ The Maven project you're going to create has the following structure:
 
 `Step 1:` Run the following command in the **Terminal 1** window to the left to go to the working directory for the Quarkus application you're going to create. (The directory was created as part of the tracks setup process.)
 
-[source,console,run]
+[source,console]
 ----
 $ cd ~/projects/quarkus/ && pwd
 ----
@@ -51,7 +51,7 @@ You'll get the following output.
 
 `Step 2:` Run the following command in the **Terminal 1** window to create the basic Maven project.
 
-[source,console,run]
+[source,bash,run]
 ----
 mvn io.quarkus.platform:quarkus-maven-plugin:3.9.2:create \
     -DprojectGroupId=org.acme \
@@ -75,7 +75,7 @@ Before you start the Quarkus application, you need to disable the CORS filter to
 
 Run the following command in **Terminal 1** to update your `application.properties` file in the *src/main/resources* directory:
 
-[source,console,run]
+[source,bash]
 ----
 cat <<EOF > /home/rhel/projects/quarkus/getting-started/src/main/resources/application.properties
 %dev.quarkus.dev-ui.cors.enabled=false
