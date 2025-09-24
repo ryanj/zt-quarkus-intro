@@ -18,7 +18,7 @@ tabs:
   - name: ">_ terminal 2"
     url: /wetty
   - name: "Dev UI"
-    url: http://terminal1-${guid}.${domain}:8080/q/dev
+    url: http://terminal1.${guid}.${domain}:8080/q/dev
     external: false
   - name: "Asciidoc Doc"
     url: https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
