@@ -1,7 +1,7 @@
 ---
 containers: []
 virtualmachines:
-  - name: "terminal1"
+  - name: terminal1
     image: "rhel-9.6"
     memory: "4G"
     cores: 1
