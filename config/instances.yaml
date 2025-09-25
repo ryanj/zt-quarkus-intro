@@ -1,7 +1,7 @@
 ---
 containers: []
 virtualmachines:
-  - name: terminal1
+  - name: terminal
     image: "rhel-9.6"
     memory: "4G"
     cores: 1
@@ -26,13 +26,13 @@ virtualmachines:
             name: cockpit
     routes:
       - name: quarkus
-        host: terminal1
+        host: terminal
         service: quarkus
         targetPort: 8080
         tls: true
         tls_termination: Edge
       - name: cockpit
-        host: terminal1
+        host: terminal
         service: cockpit
         targetPort: 9090
         tls: true
