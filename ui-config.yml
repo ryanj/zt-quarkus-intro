@@ -9,12 +9,12 @@ antora:
       solveButton: true
 
 tabs:
-  - name: ">_ terminal 1"
+  - name: ">_ Terminal 1"
     url: /wetty
   - name: "Visual Studio Code"
-    url: https://vscode-${guid}.${domain}/?folder=/home/rhel
+    url: https://vscode-${guid}.${domain}/?folder=/home/rhel/projects/quarkus/getting-started
     external: false
-  - name: ">_ terminal 2"
+  - name: ">_ Terminal 2"
     url: /wetty
   - name: "Dev UI"
     url: https://quarkus-${guid}.${domain}/q/dev
