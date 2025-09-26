@@ -19,6 +19,3 @@ tabs:
   - name: "Dev UI"
     url: https://quarkus-${guid}.${domain}/q/dev-ui/
     external: false
-  - name: "Cockpit"
-    url: https://cockpit-${guid}.${domain}/
-    external: false
