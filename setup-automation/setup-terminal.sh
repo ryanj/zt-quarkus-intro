@@ -30,11 +30,9 @@ cat >/home/$USER/.local/share/code-server/User/settings.json <<EOL
   "telemetry.enableTelemetry": false,
   "search.smartCase": true,
   "git.confirmSync": false,
-  "workbench.colorTheme": "Dark+",
+  "workbench.colorTheme": "Visual Studio Dark",
   "update.showReleaseNotes": false,
   "update.mode": "none",
-  "ansible.ansibleLint.enabled": false,
-  "ansible.ansible.useFullyQualifiedCollectionNames": true,
   "files.exclude": {
     "**/.*": true
   },
@@ -45,13 +43,7 @@ cat >/home/$USER/.local/share/code-server/User/settings.json <<EOL
     "**": true
   },
   "security.workspace.trust.enabled": false,
-  "redhat.telemetry.enabled": false,
-  "ansibleLint.enabled": false,
-  "ansible.validation.lint.enabled": false,
-  "ansible.validation.enabled": false,
-  "ansible.lightspeed.enabled": false,
-  "ansible.lightspeed.suggestions.enabled": false
-  "python.useEnvironmentsExtension": false
+  "redhat.telemetry.enabled": false
 }
 EOL
 
