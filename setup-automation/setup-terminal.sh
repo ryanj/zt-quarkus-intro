@@ -8,6 +8,8 @@ echo "Setup vm control01" > /tmp/progress.log
 
 chmod 666 /tmp/progress.log 
 
+rm /etc/motd.d/*
+
 #dnf install -y nc
 
 # Install VSCode

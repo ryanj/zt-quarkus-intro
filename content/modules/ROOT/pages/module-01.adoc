@@ -87,7 +87,7 @@ EOF
 
 You are ready to run the Quarkus application
 
-`Step 3` Run the following command in Terminal 1 to the left to compile and run the demonstration project.
+`Step 3` Run the following command in **Terminal 1** to the left to compile and run the demonstration project.
 
 [source,bash,run]
 ----
@@ -112,7 +112,9 @@ Tests paused
 Press [e] to edit command line args (currently ''), [r] to resume testing, [o] Toggle test output, [:] for the terminal, [h] for more options>
 ----
 
-`Step 4` Let's verify that the demonstration application is actually up and running.
+`Step 4` Let's verify that the demonstration application is actually up and running using **Terminal 2**.
+
+Paste the following into **Terminal 2**:
 
 [source,bash,run]
 ----
@@ -136,11 +138,10 @@ You are going to change the output of the **Hello App** API application from `He
 
 `Step 7:` Replace all mentions of `Hello` with `Hola` in the file `/home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/quickstart/GreetingResource.java`.
 
-[source,bash,run]
-----
-sed -e 's/Hello/Hola/' -i /home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/GreetingResource.java
-cat /home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/GreetingResource.java
-----
+1. Select the **Visual Studio Code** tab and then use the file browser to navigate to `/home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/quickstart/GreetingResource.java`
+2. Replace `Hello` with `Hola` on line 14
+
+NOTE: The changes will be automatically saved.  Now let's verify our changes
 
 `Step 8:` Return to **Terminal 2** and tun the following command in the terminal window:
 
@@ -197,11 +198,7 @@ Let's fix the code and get the tests to pass.
 
 `Step 14:` Change `Hola from Quarkus REST` back to `Hello from Quarkus REST`:
 
-[source,bash,run]
-----
-sed -e 's/Hola/Hello/' -i /home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/GreetingResource.java
-cat /home/rhel/projects/quarkus/getting-started/src/main/java/org/acme/GreetingResource.java
-----
+Open the **Visual Studio Code** tab, then change `Hola` to `Hello` on line 14 of `GreetingResource.java`
 
 As soon as your reset the code, Quarkus automatically re-runs the test.
 
