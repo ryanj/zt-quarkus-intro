@@ -12,28 +12,28 @@ virtualmachines:
     networks:
       - default
     services:
-      - name: quarkus
-        ports:
-          - port: 8080
-            protocol: TCP
-            targetPort: 8080
-            name: quarkus
       - name: cockpit
         ports:
           - port: 9090
             protocol: TCP
             targetPort: 9090
             name: cockpit
+      - name: quarkus
+        ports:
+          - port: 8080
+            protocol: TCP
+            targetPort: 8080
+            name: quarkus
     routes:
+      - name: cockpit
+        host: cockpit
+        service: cockpit
+        targetPort: 9090
+        tls: true
+        tls_termination: Edge
       - name: quarkus
         host: terminal
         service: quarkus
         targetPort: 8080
-        tls: true
-        tls_termination: Edge
-      - name: cockpit
-        host: terminal
-        service: cockpit
-        targetPort: 9090
         tls: true
         tls_termination: Edge
