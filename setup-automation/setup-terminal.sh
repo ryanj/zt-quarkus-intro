@@ -10,8 +10,6 @@ chmod 666 /tmp/progress.log
 
 #dnf install -y nc
 # Install VSCode
-curl -fsSL https://code-server.dev/install.sh | sh
-
 cat >/home/rhel/.config/code-server/config.yaml << EOF
 bind-addr: 0.0.0.0:9090
 auth: none
@@ -58,6 +56,7 @@ cat >/home/$USER/.local/share/code-server/User/settings.json <<EOL
 }
 EOL
 
+curl -fsSL https://code-server.dev/install.sh | sh
 sudo systemctl enable --now code-server@$USER
 
 ##Imported init from Instruqt:
