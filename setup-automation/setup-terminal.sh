@@ -9,8 +9,11 @@ echo "Setup vm control01" > /tmp/progress.log
 chmod 666 /tmp/progress.log 
 
 #dnf install -y nc
+
 # Install VSCode
-cat >/home/rhel/.config/code-server/config.yaml << EOF
+mkdir -p /home/$USER/.local/share/code-server/User/
+mkdir -p /home/$USER/.config/code-server/
+cat >/home/$USER/.config/code-server/config.yaml << EOF
 bind-addr: 0.0.0.0:9090
 auth: none
 cert: false
@@ -27,15 +30,11 @@ cat >/home/$USER/.local/share/code-server/User/settings.json <<EOL
   "telemetry.enableTelemetry": false,
   "search.smartCase": true,
   "git.confirmSync": false,
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Dark+",
   "update.showReleaseNotes": false,
   "update.mode": "none",
   "ansible.ansibleLint.enabled": false,
   "ansible.ansible.useFullyQualifiedCollectionNames": true,
-  "files.associations": {
-      "*.yml": "ansible",
-      "*.yaml": "ansible"
-  },
   "files.exclude": {
     "**/.*": true
   },
@@ -56,8 +55,10 @@ cat >/home/$USER/.local/share/code-server/User/settings.json <<EOL
 }
 EOL
 
+chown $USER.$USER /home/$USER/.config/code-server/config.yaml /home/$USER/.local/share/code-server/User/settings.json
 curl -fsSL https://code-server.dev/install.sh | sh
 sudo systemctl enable --now code-server@$USER
+
 
 ##Imported init from Instruqt:
 export GRAALVM_VERSION=22.3.1
@@ -72,11 +73,11 @@ curl -s https://archive.apache.org/dist/maven/maven-3/${MVN_VERSION}/binaries/ap
 tar -xzvf /tmp/apache-maven-${MVN_VERSION}-bin.tar.gz -C /opt/java/
 rm -fr /tmp/apache-maven-${MVN_VERSION}-bin.tar.gz
 
-echo "export GRAALVM_HOME=/opt/java/graalvm-ce-java17-${GRAALVM_VERSION}/" >> /home/rhel/.bashrc
-echo 'export JAVA_HOME=$GRAALVM_HOME' >> /home/rhel/.bashrc
-echo "export MAVEN_HOME=/opt/java/apache-maven-${MVN_VERSION}/" >> /home/rhel/.bashrc
-echo 'export PATH="$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH"'  >> /home/rhel/.bashrc
+echo "export GRAALVM_HOME=/opt/java/graalvm-ce-java17-${GRAALVM_VERSION}/" >> /home/$USER/.bashrc
+echo 'export JAVA_HOME=$GRAALVM_HOME' >> /home/$USER/.bashrc
+echo "export MAVEN_HOME=/opt/java/apache-maven-${MVN_VERSION}/" >> /home/$USER/.bashrc
+echo 'export PATH="$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH"'  >> /home/$USER/.bashrc
 
-mkdir -p /home/rhel/projects/quarkus
-echo "-w \"\n\"" >> /home/rhel/.curlrc
-chown -R rhel.rhel /home/rhel
+mkdir -p /home/$USER/projects/quarkus
+echo "-w \"\n\"" >> /home/$USER/.curlrc
+chown -R $USER.$USER /home/$USER
