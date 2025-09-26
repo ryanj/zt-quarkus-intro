@@ -3,7 +3,7 @@ containers: []
 virtualmachines:
   - name: terminal
     image: "rhel-9.6"
-    memory: "4G"
+    memory: "6G"
     cores: 1
     image_size: "40G"
     tags:
