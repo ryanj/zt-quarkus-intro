@@ -16,10 +16,7 @@ tabs:
     external: false
   - name: ">_ Terminal 2"
     url: /wetty
-  - name: "Dev UI terminal"
-    url: https://terminal-${guid}.${domain}/q/dev-ui/
-    external: false
-  - name: "Dev UI quarkus"
+  - name: "Dev UI"
     url: https://quarkus-${guid}.${domain}/q/dev-ui/
     external: false
   - name: "Cockpit"

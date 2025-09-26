@@ -32,7 +32,7 @@ virtualmachines:
         tls: true
         tls_termination: Edge
       - name: quarkus
-        host: terminal
+        host: quarkus
         service: quarkus
         targetPort: 8080
         tls: true
