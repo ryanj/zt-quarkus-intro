@@ -18,6 +18,12 @@ virtualmachines:
             protocol: TCP
             targetPort: 8080
             name: quarkus
+      - name: vscode
+        ports:
+          - port: 9090
+            protocol: TCP
+            targetPort: 9090
+            name: vscode
     routes:
       - name: quarkus
         host: quarkus
@@ -25,37 +31,9 @@ virtualmachines:
         targetPort: 8080
         tls: true
         tls_termination: Edge
-  - name: "vscode"
-    image: "devtools-ansible"
-    memory: "8G"
-    cores: 2
-    image_size: "20Gi"
-    disk_type: "scsi"
-    bootloader: "efi"
-    tags:
-      - key: "AnsibleGroup"
-        value: "isolated"
-    networks:
-      - default
-    services:
-      - name: vscode-8080
-        ports:
-          - port: 8080
-            protocol: TCP
-            targetPort: 8080
-            name: vscode
-    routes:
-      - name: vscode-8080
+      - name: vscode
         host: vscode
-        service: vscode-8080
-        targetPort: 8080
+        service: vscode
+        targetPort: 9090
         tls: true
         tls_termination: Edge
-    userdata: |-
-      #cloud-config
-      user: rhel
-      password: ansible123!
-      chpasswd: { expire: False }
-      runcmd:
-        - echo "PasswordAuthentication yes" > /etc/ssh/sshd_config.d/50-cloud-init.conf
-        - systemctl reload sshd
