@@ -12,7 +12,7 @@ tabs:
   - name: ">_ Terminal 1"
     url: /wetty
   - name: "Visual Studio Code"
-    url: https://vscode-${guid}.${domain}/?folder=/home/rhel/projects/quarkus/getting-started
+    url: https://vscode-${guid}.${domain}/?folder=/home/rhel/
     external: false
   - name: ">_ Terminal 2"
     url: /wetty
