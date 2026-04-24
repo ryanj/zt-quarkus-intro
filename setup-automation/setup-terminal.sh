@@ -56,7 +56,7 @@ sudo systemctl enable --now code-server@$USER
 
 ##Imported init from Instruqt:
 export GRAALVM_VERSION=22.3.1
-export MVN_VERSION=3.8.6
+export MVN_VERSION=3.9.0
 
 mkdir -p /opt/java
 curl -sL https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-${GRAALVM_VERSION}/graalvm-ce-java17-linux-amd64-${GRAALVM_VERSION}.tar.gz -o /tmp/graalvm-ce-java17-linux-amd64-${GRAALVM_VERSION}.tar.gz
